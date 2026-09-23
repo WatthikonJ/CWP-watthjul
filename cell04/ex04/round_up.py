@@ -1,4 +1,3 @@
-#!/usr/bin/python3
 import math
 def round_up(num):
     return math.ceil(num)

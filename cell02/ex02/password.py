@@ -1,5 +1,3 @@
-#!/usr/bin/python3
-
 password = "Python is awesome"
 
 check = input()

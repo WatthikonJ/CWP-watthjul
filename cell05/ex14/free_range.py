@@ -1,4 +1,3 @@
-#!/usr/bin/python3
 import sys
 list = list()
 if len(sys.argv[1:]) == 2:
