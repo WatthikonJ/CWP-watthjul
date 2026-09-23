@@ -1,15 +1,34 @@
 def checkmate(board):
     board = board.splitlines()
-
+    size = len(board)
+    if len(board) == 0:
+        return
+    for row in board:
+        if len(row) != size:
+            print("error")
+            return
+    piece = "KRBQP"
+    for row in range(len(board)):
+        newrow = ""
+        for col in range(len(board[row])):
+            if board[row][col] in piece:
+                newrow = newrow + board[row][col]
+            else:
+                newrow = newrow+"."
+        board[row] = newrow
     kingrow = -1
     kingcol = -1
+    kingcount = 0
 
     for row in range(len(board)):
         for col in range(len(board[row])):
             if board[row][col] == 'K':
+                kingcount = kingcount+1
                 kingrow = row
                 kingcol = col
-
+    if kingcount !=1:
+        print("error")
+        return
     if kingrow == -1:
         return
 
